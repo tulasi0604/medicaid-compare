@@ -5,7 +5,8 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/compare')
+    // Replace http://127.0.0.1:8000/api/compare with:
+fetch('https://medicaid-compare.onrender.com/api/compare')
       .then((res) => res.json())
       .then((payload) => {
         setData(payload);
